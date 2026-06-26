@@ -1,0 +1,124 @@
+body {
+    background-color: #a7a0a0; /* Tom de fundo levemente azulado/cinza */
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Caixa principal idêntica à do print */
+.cartao-perfil {
+    background-color: #817b75;
+    border: 1px solid #d2c0ad;
+    border-radius: 30px; /* Cantos bem arredondados */
+    padding: 40px;
+    max-width: 850px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    
+    /* Ativa as duas colunas lado a lado */
+    display: flex;
+    gap: 40px; /* Espaço entre a esquerda e a direita */
+    align-items: flex-start;
+}
+
+/* Configuração do lado esquerdo */
+.coluna-esquerda {
+    flex: 0 0 200px; /* Define um tamanho fixo para a coluna da foto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+/* Deixa a foto totalmente redonda */
+.foto-redonda {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%; /* 50% deixa redondo perfeito */
+    border: 2px solid #263743;
+    margin-bottom: 20px;
+}
+
+/* Estilo da listinha de Hobbies */
+.meus-hobbies {
+    width: 100%;
+}
+
+.meus-hobbies h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #e09f9b;
+}
+
+.meus-hobbies ul {
+    list-style-type: none; /* Remove as bolinhas padrão */
+    padding-left: 5px;
+    margin: 0;
+}
+
+.meus-hobbies li {
+    font-size: 13px;
+    color: black;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 12px;
+}
+
+/* Cria aquele mini tracinho/check antes do hobby */
+.meus-hobbies li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: black;
+    font-size: 11px;
+}
+
+/* Configuração do lado direito */
+.coluna-direita {
+    flex: 1; /* Ocupa o restante do espaço */
+}
+
+/* Título centralizado em relação ao texto dele */
+.nome-titulo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a252f;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* O texto descritivo */
+.texto-sobre {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #000000;
+    text-align: justify; /* Alinha o texto bonitinho dos dois lados */
+    margin: 0;
+}
+
+.caixa-destaque {
+    background-color: #fdfbf7; /* Cor de fundo da caixa */
+    border: 1px solid #1f2021;  /* Borda sutil ao redor */
+    border-radius: 16px;       /* Bordas arredondadas */
+    padding: 25px;             /* Espaçamento interno para o texto não colar na borda */
+    margin-top: 20px;          /* Espaço para não colar nos elementos de cima */
+}
+
+.caixa-destaque h2 {
+    margin-top: 0;             /* Alinha o título "Sobre Mim" perfeitamente dentro da caixa */
+}
+
+.frase-italiano {
+    font-style: italic;     /* Deixa em itálico */
+    text-align: center;     /* Centraliza na tela */
+    margin-top: 20px;       /* Dá um espaço para não grudar na caixinha de cima */
+    color: #5b554e;         /* Cor cinza-escura puxada do gatinho */
+    font-size: 15px;
+    display: block;         /* Garante que ela vai ocupar uma linha própria */
+}
